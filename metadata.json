@@ -1,0 +1,6 @@
+{
+  "name": "SN Alankarana – Herbal Hair & Skin Care",
+  "description": "Luxury handcrafted herbal hair and skin care inspired by Ayurveda. Experience artisanal soaps made with pure botanicals, goat milk, red wine, ubtan, charcoal, and papaya.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

@@ -1,0 +1,104 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-serif: "Cormorant Garamond", Garamond, Georgia, serif;
+    --font-cinzel: "Cinzel", Georgia, serif;
+    --font-sans: "Plus Jakarta Sans", -apple-system, BlinkMacSystemFont, sans-serif;
+    --font-script: "Pinyon Script", cursive;
+
+    --color-cream: #FBF4EA;
+    --color-ivory: #FFFDF9;
+    --color-wine: #7E2433;
+    --color-wine-dark: #581622;
+    --color-olive: #5B6B2F;
+    --color-honey: #C8872E;
+    --color-papaya: #E8742A;
+    --color-blush: #F4C6C3;
+    --color-charcoal: #1E1E1E;
+    --color-border: #E8DCCF;
+  }
+
+  body {
+    font-family: var(--font-sans);
+    background-color: var(--color-cream);
+    color: var(--color-charcoal);
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    letter-spacing: 0.01em;
+  }
+
+  h1, h2, h3, h4, .font-serif {
+    font-family: var(--font-serif);
+    letter-spacing: -0.015em;
+  }
+
+  .font-cinzel {
+    font-family: var(--font-cinzel);
+    letter-spacing: 0.12em;
+  }
+
+  .font-script {
+    font-family: var(--font-script);
+    font-weight: 400;
+  }
+}
+
+/* Luxury Paper Grain texture overlay */
+.bg-paper-grain {
+  background-color: #FBF4EA;
+  background-image: radial-gradient(rgba(126, 36, 51, 0.04) 1px, transparent 0);
+  background-size: 24px 24px;
+}
+
+/* Custom subtle scrollbar */
+::-webkit-scrollbar {
+  width: 7px;
+  height: 7px;
+}
+
+::-webkit-scrollbar-track {
+  background: #F4EDE0;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #C4B29E;
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #7E2433;
+}
+
+/* Glassmorphism subtle luxury */
+.glass-luxury {
+  background: rgba(255, 253, 249, 0.88);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(232, 220, 207, 0.65);
+}
+
+.dark-glass-luxury {
+  background: rgba(30, 30, 30, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Marquee keyframes */
+@keyframes marquee {
+  0% { transform: translateX(0%); }
+  100% { transform: translateX(-50%); }
+}
+
+.animate-marquee {
+  display: flex;
+  width: 200%;
+  animation: marquee 28s linear infinite;
+}
+
+.animate-marquee:hover {
+  animation-play-state: paused;
+}
